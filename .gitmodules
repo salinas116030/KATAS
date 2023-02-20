@@ -1,0 +1,3 @@
+[submodule "php8-testing-boilerplate"]
+	path = php8-testing-boilerplate
+	url = https://github.com/540/php8-testing-boilerplate.git
