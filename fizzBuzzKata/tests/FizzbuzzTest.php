@@ -9,36 +9,12 @@ use PHPUnit\Framework\TestCase;
 
 final class fizzbuzzTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function Should_return_three_when_sum_is_one_plus_two()
+    private FizzBuzz $fizzbuzz;
+    //Pre-testing: pre-uploading
+    protected function setUp():void
     {
-        $calculator = new Fizzbuzz();
-
-        $result = $calculator->add(1, 2);
-
-        $this->assertEquals(3, $result);
-    }
-
-    /**
-     * @test
-     */
-    public function Should_return_two_when_multiplication_is_one_multiplied_by_two()
-    {
-        $calculator = new Fizzbuzz();
-
-        $result = $calculator->multiply(1, 2);
-
-        $this->assertEquals(2, $result);
-    }
-
-    /**
-     * @test
-     */
-    public function Should_return_papaya() {
-        $this->assertEquals('papaya','papaya');
-        //comentario
+        parent::setUp();
+        $this->fizzbuzz = new FizzBuzz();
     }
 
     /**
@@ -46,16 +22,14 @@ final class fizzbuzzTest extends TestCase
      */
     public function Should_return_fizz() {
         $this->assertEquals('fizz','fizz');
-        //comentario  en tu corazon
-
     }
 
     /**
      * @test
      */
     public function  Should_return_fizz_when_number_multiple_of_three() {
-        $calculator = new Fizzbuzz();
-        $result = $calculator->fizzKata(9);
+        $result = $this->fizzbuzz->fizzKata(9);
+
         $this->assertEquals('fizz',$result);
     }
 
@@ -70,8 +44,8 @@ final class fizzbuzzTest extends TestCase
      * @test
      */
     public function Should_return_buzz_when_number_multiple_of_five() {
-        $calculator = new Fizzbuzz();
-        $result = $calculator->fizzKata(10);
+        $result = $this->fizzbuzz->fizzKata(10);
+
         $this->assertEquals('buzz',$result);
     }
 
@@ -86,8 +60,8 @@ final class fizzbuzzTest extends TestCase
      * @test
      */
     public function Should_return_fizzBuzz_when_number_multiple_of_three_and_five(){
-        $calculator = new Fizzbuzz();
-        $result = $calculator->fizzKata(15);
+        $result = $this->fizzbuzz->fizzKata(15);
+
         $this->assertEquals('fizzBuzz',$result);
     }
 
