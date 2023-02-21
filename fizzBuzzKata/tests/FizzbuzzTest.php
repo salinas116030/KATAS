@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Deg540\PHPTestingBoilerplate\Test;
 
-use Deg540\PHPTestingBoilerplate\Calculator;
+use Deg540\PHPTestingBoilerplate\Fizzbuzz;
 use PHPUnit\Framework\TestCase;
 
-final class CalculatorTest extends TestCase
+final class fizzbuzzTest extends TestCase
 {
     /**
      * @test
      */
     public function Should_return_three_when_sum_is_one_plus_two()
     {
-        $calculator = new Calculator();
+        $calculator = new Fizzbuzz();
 
         $result = $calculator->add(1, 2);
 
@@ -26,7 +26,7 @@ final class CalculatorTest extends TestCase
      */
     public function Should_return_two_when_multiplication_is_one_multiplied_by_two()
     {
-        $calculator = new Calculator();
+        $calculator = new Fizzbuzz();
 
         $result = $calculator->multiply(1, 2);
 
@@ -54,7 +54,7 @@ final class CalculatorTest extends TestCase
      * @test
      */
     public function  Should_return_fizz_when_number_multiple_of_three() {
-        $calculator = new Calculator();
+        $calculator = new Fizzbuzz();
         $result = $calculator->fizzKata(9);
         $this->assertEquals('fizz',$result);
     }
@@ -70,7 +70,7 @@ final class CalculatorTest extends TestCase
      * @test
      */
     public function Should_return_buzz_when_number_multiple_of_five() {
-        $calculator = new Calculator();
+        $calculator = new Fizzbuzz();
         $result = $calculator->fizzKata(10);
         $this->assertEquals('buzz',$result);
     }
@@ -86,7 +86,7 @@ final class CalculatorTest extends TestCase
      * @test
      */
     public function Should_return_fizzBuzz_when_number_multiple_of_three_and_five(){
-        $calculator = new Calculator();
+        $calculator = new Fizzbuzz();
         $result = $calculator->fizzKata(15);
         $this->assertEquals('fizzBuzz',$result);
     }
