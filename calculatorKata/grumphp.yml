@@ -1,0 +1,51 @@
+grumphp:
+    fixer:
+        enabled: true
+        fix_by_default: true
+    tasks:
+        phpunit:
+            metadata:
+                blocking: true
+                enabled: true
+                label: "phpUnit => Testing Validation"
+                priority:
+                task: null
+            config_file: ~
+            testsuite: ~
+            group: [ ]
+            exclude_group: [ ]
+            always_execute: false
+            order: null
+        phpmd:
+            metadata:
+                blocking: true
+                enabled: true
+                label: "phpMessDetector => ['cleancode','codesize','naming']"
+                priority: 2
+                task: null
+            whitelist_patterns: []
+            exclude: [ ]
+            report_format: text
+            ruleset: ['cleancode', 'codesize', 'naming']
+            triggered_by: ['php']
+        phpcs:
+            metadata:
+                blocking: true
+                enabled: true
+                label: "phpCodeSniffer =>USING Standard PSR12"
+                priority: 3
+                task: null
+            standard: ['PSR12']
+            severity: ~
+            error_severity: ~
+            warning_severity: ~
+            tab_width: ~
+            report: full
+            report_width: ~
+            whitelist_patterns: [ ]
+            encoding: ~
+            ignore_patterns: [ ]
+            sniffs: [ ]
+            triggered_by: [ php ]
+            exclude: [ ]
+            show_sniffs_error_path: true

@@ -9,5 +9,39 @@ use PHPUnit\Framework\TestCase;
 
 final class StringCalculatorTest extends TestCase
 {
-    // TODO: String Calculator Kata Tests
+    /**
+     * @test
+     */
+    public function shouldReturnsZeroWhenIntroducedEmptyString()
+    {
+        $calculator = new StringCalculator();
+
+        $sumResult = $calculator->add("");
+
+        $this->assertSame(0, $sumResult);
+    }
+
+    /**
+     * @test
+     */
+    public function oneNumberStringReturnsItValue()
+    {
+        $calculator = new StringCalculator();
+
+        $sumResult = $calculator->add("2");
+
+        $this->assertSame(2, $sumResult);
+    }
+
+    /**
+     * @test
+     */
+    public function twoNumberStringReturnsTheirSum()
+    {
+        $calculator = new StringCalculator();
+
+        $sumResult = $calculator->add("1,2");
+
+        $this->assertSame(3, 3);
+    }
 }
