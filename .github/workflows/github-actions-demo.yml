@@ -1,9 +1,10 @@
 name: GitHub Actions phpUnit
 
 on:
-  branches:
-    - main
-  branches-ignore:
+  push:
+    branches:
+      - main
+    branches-ignore:
 
 jobs:
   Explore-GitHub-Actions:
