@@ -26,4 +26,5 @@ jobs:
           composer install
 
       - name: Run PHPUnit tests
-        run: ./calculatorKata/vendor/bin/phpunit --testdox --log-junit=test-results.xml
+        working-directory: ./calculatorKata
+        run: /vendor/bin/phpunit --testdox --log-junit=test-results.xml
