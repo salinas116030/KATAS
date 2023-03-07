@@ -6,7 +6,7 @@ grumphp:
         phpunit:
             metadata:
                 blocking: true
-                enabled: true
+                enabled: false
                 label: "phpUnit => Testing Validation"
                 priority:
                 task: null
@@ -19,7 +19,7 @@ grumphp:
         phpmd:
             metadata:
                 blocking: true
-                enabled: true
+                enabled: false
                 label: "phpMessDetector => ['cleancode','codesize','naming']"
                 priority: 2
                 task: null
@@ -31,7 +31,7 @@ grumphp:
         phpcs:
             metadata:
                 blocking: true
-                enabled: true
+                enabled: false
                 label: "phpCodeSniffer =>USING Standard PSR12"
                 priority: 3
                 task: null

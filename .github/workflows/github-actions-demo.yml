@@ -20,7 +20,7 @@ jobs:
           ls ${{ github.workspace }}
 
       - name: Install dependencies
-        run: ./calculatorKata/composer install
+        run: ../calculatorKata/composer install
 
       - name: Run PHPUnit tests
         run: ./calculatorKata/vendor/bin/phpunit --testdox --log-junit=test-results.xml
