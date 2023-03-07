@@ -7,7 +7,7 @@ on:
     branches-ignore:
 
 jobs:
-  Explore-GitHub-Actions:
+  phpUnitTesting:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🐧 This PHP workflow is ready in server hosted by GitHub!"
@@ -20,7 +20,7 @@ jobs:
           ls ${{ github.workspace }}
 
       - name: Install dependencies
-        run: composer install
+        run: ./calculatorKata/composer install
 
       - name: Run PHPUnit tests
-        run: vendor/bin/phpunit --testdox --log-junit=test-results.xml
+        run: ./calculatorKata/vendor/bin/phpunit --testdox --log-junit=test-results.xml
